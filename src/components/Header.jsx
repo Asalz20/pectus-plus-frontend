@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header>
       <div className="bg-primary h-20 sm:h-10">
-        <ul className="flex flex-col min-w-[300px] items-center justify-evenly m-auto text-white h-full max-w-[490px] xs:flex-wrap xs:flex-row sm:max-w-[1600px] sm:flex-row sm:justify-around">
+        <ul className="flex flex-col items-center justify-evenly m-auto text-white h-full max-w-[490px] xs:flex-wrap xs:flex-row sm:max-w-[1600px] sm:flex-row sm:justify-around">
           <li className="flex items-center">
             <FaTruck className="text-white mr-2" />
             Free Shipping

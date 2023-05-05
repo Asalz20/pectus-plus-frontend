@@ -11,6 +11,12 @@ module.exports = {
       screens: {
         xs: "485px",
       },
+      maxWidth: {
+        container: "1600px",
+      },
+      minWidth: {
+        container: "280px",
+      },
     },
   },
   plugins: [],
