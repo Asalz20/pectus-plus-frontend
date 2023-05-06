@@ -5,6 +5,11 @@ import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  let links = [
+    { name: "About", path: "/about" },
+    { name: "Blog", path: "/about" },
+    { name: "Login", path: "/about" },
+  ];
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -42,26 +47,39 @@ const Navbar = () => {
         } sm:block sm:relative sm:bg-inherit sm:pb-0 sm:order-2`}
       >
         <ul className="sm:flex sm:justify-center sm:items-center">
-          <li className="my-2 sm:my-0 sm:mx-3">
+          <li className="hidden sm:block my-2 sm:my-0 sm:mx-2">
+            <Link>Shop</Link>
+          </li>
+          {links.map((link) => (
+            <li className="my-2 sm:my-0 sm:mx-2">
+              <Link
+                className="text-gray-600 hover:text-gray-800"
+                to={link.path}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+          {/* <li className="my-2 sm:my-0 sm:mx-2">
             <a className="text-gray-600 hover:text-gray-800" href="#shop">
               Shop
             </a>
           </li>
-          <li className="my-2 sm:my-0 sm:mx-3">
+          <li className="my-2 sm:my-0 sm:mx-2">
             <a className="text-gray-600 hover:text-gray-800" href="#about">
               About
             </a>
           </li>
-          <li className="my-2 sm:my-0 sm:mx-3">
+          <li className="my-2 sm:my-0 sm:mx-2">
             <a className="text-gray-600 hover:text-gray-800" href="#blog">
               Blog
             </a>
           </li>
-          <li className="my-2 sm:my-0 sm:mx-3">
-            <a className="text-gray-600 hover:text-gray-800" href="#login">
-              Login
+          <li className="my-2 sm:my-0 sm:mx-2">
+            <a className="text-gray-600 hover:text-gray-800" href="#welcome">
+              Welcome
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="w-full sm:flex sm:order-1">
