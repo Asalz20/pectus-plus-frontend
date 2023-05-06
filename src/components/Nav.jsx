@@ -47,11 +47,11 @@ const Navbar = () => {
         } sm:block sm:relative sm:bg-inherit sm:pb-0 sm:order-2`}
       >
         <ul className="sm:flex sm:justify-center sm:items-center">
-          <li className="hidden sm:block my-2 sm:my-0 sm:mx-2">
+          <li key={0} className="hidden sm:block my-2 sm:my-0 sm:mx-2">
             <Link>Shop</Link>
           </li>
-          {links.map((link) => (
-            <li className="my-2 sm:my-0 sm:mx-2">
+          {links.map((link, index) => (
+            <li key={index} className="my-2 sm:my-0 sm:mx-2">
               <Link
                 className="text-gray-600 hover:text-gray-800"
                 to={link.path}
@@ -60,26 +60,6 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          {/* <li className="my-2 sm:my-0 sm:mx-2">
-            <a className="text-gray-600 hover:text-gray-800" href="#shop">
-              Shop
-            </a>
-          </li>
-          <li className="my-2 sm:my-0 sm:mx-2">
-            <a className="text-gray-600 hover:text-gray-800" href="#about">
-              About
-            </a>
-          </li>
-          <li className="my-2 sm:my-0 sm:mx-2">
-            <a className="text-gray-600 hover:text-gray-800" href="#blog">
-              Blog
-            </a>
-          </li>
-          <li className="my-2 sm:my-0 sm:mx-2">
-            <a className="text-gray-600 hover:text-gray-800" href="#welcome">
-              Welcome
-            </a>
-          </li> */}
         </ul>
       </div>
       <div className="w-full sm:flex sm:order-1">
