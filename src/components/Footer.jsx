@@ -32,7 +32,7 @@ export const Footer = () => {
           <ul>
             <address>
               201 Broadway Avenue, New York City, NY
-              <span>Zip: 01001</span>
+              <span> Zip: 01001</span>
             </address>
             <li>
               {" "}
@@ -40,8 +40,8 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row justify-around">
-          <div className="mb-8">
+        <div className="flex flex-row justify-center w-full max-w-screen-lg m-auto">
+          <div className="w-full flex flex-col items-center mb-8 text-center">
             <h3 className="mb-2">INFORMATION</h3>
             <ul>
               {infoLinks.map((links, index) => (
@@ -51,7 +51,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="mb-8">
+          <div className="w-full flex flex-col items-center mb-8 text-center">
             <h3 className="mb-2">QUICK LINKS</h3>
             <ul>
               {quickLinks.map((links, index) => (
@@ -62,6 +62,10 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+        <span className="text-center">
+          &copy; {new Date().getFullYear()} Powered by the team over at Pectus
+          Plus
+        </span>
       </section>
     </footer>
   );
