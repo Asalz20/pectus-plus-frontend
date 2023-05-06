@@ -1,6 +1,7 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegCreditCard } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
+import Nav from "./Nav";
 export const Header = () => {
   return (
     <header>
@@ -20,6 +21,7 @@ export const Header = () => {
           </li>
         </ul>
       </div>
+      <Nav />
     </header>
   );
 };
