@@ -17,14 +17,17 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="flex items-center">
+      <div className="flex flex-row items-center max-w-[1000] m-auto">
         <BiPaperPlane className="text-6xl" />
         <h2>Sign Up for NewsLetter</h2>
-        <input
-          className="border-4 border-solid border-gray-300 rounded-md p-2 w-full"
-          type="text"
-          placeholder="Enter your email"
-        />
+        <label className="flex w-full" htmlFor="">
+          <input
+            className="border-4 border-solid border-gray-300 rounded-md p-2 w-full"
+            type="text"
+            placeholder="Enter your email"
+          />
+          <button>Subscribe</button>
+        </label>
       </div>
       <section className="flex flex-col p-3 bg-primary text-white">
         <div className=" flex flex-col mb-8 items-center justify-center text-center">
