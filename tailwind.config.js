@@ -1,5 +1,8 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,html}"],
+  daisyui: {
+    themes: [],
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -19,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

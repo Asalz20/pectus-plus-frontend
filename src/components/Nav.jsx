@@ -47,15 +47,27 @@ const Navbar = () => {
         } sm:block sm:relative sm:bg-inherit sm:pb-0 sm:order-2`}
       >
         <ul className="sm:flex sm:justify-center sm:items-center">
-          <li key={0} className="hidden sm:block my-2 sm:my-0 sm:mx-2">
-            <Link>Shop</Link>
+          <li className="hidden sm:block my-2 sm:my-0 sm:mx-2">
+            <div className="dropdown dropdown-hover">
+              <label tabIndex={0} className="btn m-1 border-0 p-0">
+                Shop
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow rounded-box w-52 z-10 bg-red-50"
+              >
+                <li>
+                  <a>Item 1</a>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
+            </div>
           </li>
           {links.map((link, index) => (
             <li key={index} className="my-2 sm:my-0 sm:mx-2">
-              <Link
-                className="text-gray-600 hover:text-gray-800"
-                to={link.path}
-              >
+              <Link className="hover:text-gray-800" to={link.path}>
                 {link.name}
               </Link>
             </li>
