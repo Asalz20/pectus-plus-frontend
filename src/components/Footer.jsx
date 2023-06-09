@@ -17,17 +17,21 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="flex flex-row items-center max-w-[1000] m-auto">
-        <BiPaperPlane className="text-6xl" />
-        <h2>Sign Up for NewsLetter</h2>
-        <label className="flex w-full" htmlFor="">
-          <input
-            className="border-4 border-solid border-gray-300 rounded-md p-2 w-full"
-            type="text"
-            placeholder="Enter your email"
-          />
-          <button>Subscribe</button>
-        </label>
+      <div className="flex flex-col items-center max-w-[1200px] m-auto sm:flex-row">
+        <div className="flex items-center">
+          <BiPaperPlane className="text-6xl" />
+          <label className="flex" htmlFor="email">
+            Sign Up For NewsLetter
+          </label>
+        </div>
+
+        <input
+          id="email"
+          className="border-4 border-solid border-gray-300 rounded-md p-2 m-2 w-4/5"
+          type="text"
+          placeholder="Enter your email"
+        />
+        <button className="btn m-2">Subscribe</button>
       </div>
       <section className="flex flex-col p-3 bg-primary text-white">
         <div className=" flex flex-col mb-8 items-center justify-center text-center">
@@ -43,7 +47,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row justify-center w-full max-w-screen-lg m-auto">
+        <div className="flex flex-row justify-center w-full max-w-[1200px] m-auto">
           <div className="w-full flex flex-col items-center mb-8 text-center">
             <h3 className="mb-2">INFORMATION</h3>
             <ul>
