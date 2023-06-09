@@ -17,14 +17,21 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="flex items-center">
-        <BiPaperPlane className="text-6xl" />
-        <h2>Sign Up for NewsLetter</h2>
+      <div className="flex flex-col items-center max-w-[1200px] m-auto sm:flex-row">
+        <div className="flex items-center">
+          <BiPaperPlane className="text-6xl" />
+          <label className="flex" htmlFor="email">
+            Sign Up For NewsLetter
+          </label>
+        </div>
+
         <input
-          className="border-4 border-solid border-gray-300 rounded-md p-2 w-full"
+          id="email"
+          className="border-4 border-solid border-gray-300 rounded-md p-2 m-2 w-4/5"
           type="text"
           placeholder="Enter your email"
         />
+        <button className="btn m-2">Subscribe</button>
       </div>
       <section className="flex flex-col p-3 bg-primary text-white">
         <div className=" flex flex-col mb-8 items-center justify-center text-center">
@@ -32,7 +39,7 @@ export const Footer = () => {
           <ul>
             <address>
               201 Broadway Avenue, New York City, NY
-              <span>Zip: 01001</span>
+              <span> Zip: 01001</span>
             </address>
             <li>
               {" "}
@@ -40,8 +47,8 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row justify-around">
-          <div className="mb-8">
+        <div className="flex flex-row justify-center w-full max-w-[1200px] m-auto">
+          <div className="w-full flex flex-col items-center mb-8 text-center">
             <h3 className="mb-2">INFORMATION</h3>
             <ul>
               {infoLinks.map((links, index) => (
@@ -51,7 +58,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="mb-8">
+          <div className="w-full flex flex-col items-center mb-8 text-center">
             <h3 className="mb-2">QUICK LINKS</h3>
             <ul>
               {quickLinks.map((links, index) => (
@@ -62,6 +69,10 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+        <span className="text-center">
+          &copy; {new Date().getFullYear()} Powered by the team over at Pectus
+          Plus
+        </span>
       </section>
     </footer>
   );
