@@ -29,9 +29,9 @@ const Navbar = () => {
             <RxHamburgerMenu className="text-2xl cursor-pointer" />
           )}
         </button>
-        <a className="sm:hidden" href="#shop">
+        <Link className="sm:hidden" to="/shop">
           Shop
-        </a>
+        </Link>
         <a className="sm:hidden" href="#welcome">
           Welcome
         </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li className="hidden sm:block my-2 sm:my-0 sm:mx-2">
             <div className="dropdown dropdown-hover">
               <label tabIndex={0} className="btn m-1 border-0 p-0">
-                Shop
+                <Link to="shop">Shop</Link>
               </label>
               <ul
                 tabIndex={0}
