@@ -47,24 +47,48 @@ const Navbar = () => {
         } sm:block sm:relative sm:bg-inherit sm:pb-0 sm:order-2`}
       >
         <ul className="sm:flex sm:justify-center sm:items-center">
-          <li className="hidden sm:block my-2 sm:my-0 sm:mx-2">
-            <div className="dropdown dropdown-hover">
-              <label tabIndex={0} className="btn m-1 border-0 p-0">
-                <Link to="shop">Shop</Link>
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow rounded-box w-52 z-10 bg-red-50"
-              >
-                <li>
-                  <a>Item 1</a>
+          <div className="p-10">
+            <div className="dropdown inline-block relative">
+              <Link to="shop">
+                <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                  <span className="mr-1">Shop</span>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                  </svg>
+                </button>
+              </Link>
+              <ul className="dropdown-menu absolute hidden hover:block text-gray-700 pt-1">
+                <li className="">
+                  <a
+                    className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                  >
+                    One
+                  </a>
                 </li>
-                <li>
-                  <a>Item 2</a>
+                <li className="">
+                  <a
+                    className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                  >
+                    Two
+                  </a>
+                </li>
+                <li className="">
+                  <a
+                    className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                  >
+                    Three is the magic number
+                  </a>
                 </li>
               </ul>
             </div>
-          </li>
+          </div>
           {links.map((link, index) => (
             <li key={index} className="my-2 sm:my-0 sm:mx-2">
               <Link className="hover:text-gray-800" to={link.path}>
